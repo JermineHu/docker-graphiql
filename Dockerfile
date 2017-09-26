@@ -35,7 +35,7 @@ RUN apk add --no-cache curl git  make gcc g++ python linux-headers binutils-gold
     fi; \
   fi && \
 
-  git clone https://github.com/graphql/graphiql.git /app ; \
+  git clone https://github.com/apollographql/mock-demo /app ; \
 
   apk del curl make git gcc g++ python linux-headers binutils-gold gnupg ${DEL_PKGS} && \
   rm -rf ${RM_DIRS} /node-${VERSION}* /usr/share/man /tmp/* /var/cache/apk/* /app/.git \
