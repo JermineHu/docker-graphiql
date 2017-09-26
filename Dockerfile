@@ -5,7 +5,7 @@ ENV VERSION=v8.5.0 NPM_VERSION=5 YARN_VERSION=latest
 RUN apk add git=2.14.1-r1 \
     --repository http://dl-cdn.alpinelinux.org/alpine/edge/main \
     --no-cache ; \
-    apk add nodejs=current-8.5.0-r0.apk  \
+    apk add nodejs=current-8.5.0-r0  \
     --repository http://http://dl-4.alpinelinux.org/alpine/edge/community \
     --no-cache ; \
 
