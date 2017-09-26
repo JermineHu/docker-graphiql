@@ -10,14 +10,13 @@ RUN apk add git=2.14.1-r1 \
     --no-cache ; \
 
   git clone https://github.com/graphql/graphiql.git /app ; \
-
-  apk del git ${DEL_PKGS} && \
+  npm install ;\
+  apk del git ; \
   rm -rf ${RM_DIRS} /usr/share/man /tmp/* /var/cache/apk/* /app/.git \
     /root/.npm /root/.node-gyp /root/.gnupg /usr/lib/node_modules/npm/man \
     /usr/lib/node_modules/npm/doc /usr/lib/node_modules/npm/html /usr/lib/node_modules/npm/scripts
 
 WORKDIR /app
-RUN npm install
 
 EXPOSE 3000
 CMD npm start
